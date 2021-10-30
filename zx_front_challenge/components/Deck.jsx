@@ -9,14 +9,15 @@ export default function Deck() {
     const dispatch = useDispatch();
     let categories = useSelector((state) => state.categories.categories);
     let products = useSelector((state) => state.products.all_products);
+    let currentPage = useSelector((state) => state.pages.page_number);
 
     useEffect(() => {
         dispatch(getCategories());
     }, [dispatch]);
 
     useEffect(() => {
-        dispatch(getProducts());
-    }, [dispatch]);
+        dispatch(getProducts(currentPage));
+    }, [dispatch, currentPage]);
 
     return (
         <StyledDeck>

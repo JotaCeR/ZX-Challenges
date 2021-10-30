@@ -5,6 +5,7 @@ import StyledBody from '../styles/StyledBody';
 import StyledSkeleton from '../styles/skeleton/StyledSkeleton';
 import StyledNavBar from '../styles/skeleton/StyledNav';
 import Deck from '../components/Deck';
+import Nav from '../components/Nav';
 
 
 export default function Home() {
@@ -18,7 +19,7 @@ export default function Home() {
         <StyledTitle>Siempre en Casa</StyledTitle>
       </StyledHeader>
       <StyledSkeleton>
-        <StyledNavBar />
+        <Nav />
         <Deck />
       </StyledSkeleton>
     </StyledBody>
